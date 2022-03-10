@@ -1,13 +1,84 @@
-body {
+*,
+*::after,
+*::before {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #34495e;
+}
+
+.calculator {
+  background-color: #34495e;
+  height: auto;
+  width: 600px;
+  border-radius: 10px;
+}
+
+.calculator__display {
+  height: 110px;
+  background-color: #130f40;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  flex-direction: column;
+  gap: 0.5rem;
+  word-break: break-all;
+  word-wrap: break-word;
+}
+
+.prev-display {
+  font-size: 22px;
+}
+.cur-display {
+  font-size: 32px;
+}
+
+.calculator__content {
+  padding: 20px;
+  /* width: 100%; */
+  background-color: #130f40;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  border-radius: 10px;
+}
+
+.btn {
+  padding: 10px;
+  border: none;
+  outline: none;
+  background-color: #fff;
+  border-radius: 5px;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+.btn:hover {
+}
+
+.del,
+.reset,
+.equal {
+  background-color: #34495e;
+  color: #fff;
+  text-transform: uppercase;
+}
+.reset {
+  grid-column: 1/3;
+}
+.equal {
+  grid-column: 3/-1;
+  background-color: #f0932b;
 }
